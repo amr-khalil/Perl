@@ -4,7 +4,7 @@ use IO::File;
 # use a scalar variable for the name of the file
 my $filename = "linesfile.txt";
 
-# Open the file - with error reporting
+# open the file - with error reporting
 my $fh = IO::File->new($filename, 'r');
 if (!$fh){
 	print("cannot open $filename ($!)\n");
@@ -17,4 +17,6 @@ while($fh->getline){
 	$count++
 }
 
+# close and print
+$fh->close;
 print "There are $count lines in $filename\n";
