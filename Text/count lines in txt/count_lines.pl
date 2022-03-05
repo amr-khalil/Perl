@@ -2,7 +2,7 @@ use warnings;
 use IO::File;
 
 # use a scalar variable for the name of the file
-my $filename = "linesfile.txt";
+my $filename = "file.txt";
 
 # open the file - with error reporting
 my $fh = IO::File->new($filename, 'r');
