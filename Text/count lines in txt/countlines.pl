@@ -1,9 +1,20 @@
+use warnings;
+use IO::File;
+
 # use a scalar variable for the name of the file
 my $filename = "linesfile.txt";
 
-open(FH, $filename); # open the file
-my @lines = <FH>; # read the file
-close(FH); # close the file
+# Open the file - with error reporting
+my $fh = IO::File->new($filename, 'r');
+if (!$fh){
+	print("cannot open $filename ($!)\n");
+	exit;
+}
 
-my $count = scalar @lines; # the number of lines in a file
-print "There are $count line in $filename\n";
+# count the lines
+my $count = 0; 
+while($fh->getline){
+	$count++
+}
+
+print "There are $count lines in $filename\n";
