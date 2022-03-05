@@ -1,4 +1,4 @@
-my $filename = 'linesfile.txt';
+my $filename = 'file.txt';
 
 open(my $fh, '<', $filename) or die "Cannot open file: $!";
 print while <$fh>;
