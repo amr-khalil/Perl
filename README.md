@@ -1,7 +1,6 @@
 # Perl
-Perl useful scripts
 
-#Install Packages in Perl
+# Installing Packages in Perl
 
 
 To install a module with CPAN, the syntax is
