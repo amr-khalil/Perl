@@ -1,5 +1,10 @@
-my $filename = 'file.txt';
+use feature 'say';
+my $filename = 'linesfile.txt';
 
 open(my $fh, '<', $filename) or die "Cannot open file: $!";
-print while <$fh>;
+
+while (my $line = <$fh>){#
+	chomp $line;
+	say $line;
+};
 close $fh;
