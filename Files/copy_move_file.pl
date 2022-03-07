@@ -6,9 +6,9 @@ use File::Copy;
 my $file_from = "file.txt";
 my $file_to = "../new_file.txt";
 
-copy_files($file_from, $file_to);
+copy_file($file_from, $file_to);
 
-sub copy_files{
+sub copy_file{
 	# Parameters
 	#$_[0]: file path source
 	#$_[1]: file path distenation
