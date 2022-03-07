@@ -15,6 +15,7 @@ sub copy_files{
 
 	$file_from = $_[0];
 	$file_to = $_[1];
+	
 	copy($file_from, $file_to) or die("Error: Copy failed! Check the file path");
 	print("Success: copy is finished\n")
 }
