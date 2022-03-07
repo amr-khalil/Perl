@@ -3,9 +3,9 @@ use warnings;
 use feature 'say';
  
 my $dir = ".";
-my $format = 'txt';
+my $format = 'csv';
 
-filter_dir($dir);
+filter_dir($dir, $format);
 
 sub filter_dir{
 	# Parameters
@@ -20,7 +20,10 @@ sub filter_dir{
 		if ($item eq "." or $item eq ".."){
 			next;
 		}
-		say $item;
+
+		if ($item =~ /$_[1]$/){
+			say $item;
+		}
 	}
 	closedir $DH;
 }
