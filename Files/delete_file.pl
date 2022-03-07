@@ -13,6 +13,6 @@ sub delete_file{
 	
 	$file = $_[0];
 
-	unlink($file) or die("Error: Copy failed! Check the file path");
-	print("Success: copy is finished\n")
+	unlink($file) or die("Error: file deletion failed!");
+	print("Success: file is deleted\n")
 }
